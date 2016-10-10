@@ -3,13 +3,148 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>4 4 github profile</title>
+    <title>github profile</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.css" />
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
 
-    <h1>Hello World</h1>
+     <header>
+ <div class="container-header">
+   <span class="octicon octicon-mark-github"></span>
+   <div class="header-search">
+     <input type="text" placeholder="Search GitHub">
+   </div>
+   <ul class="header-nav">
+     <li><a href="#">Pull requests</a></li>
+     <li><a href="#">Issues</a></li>
+     <li><a href="#">Gist</a></li>
+   </ul>
+   <ul class="account">
+     <li><a href="#">
+       <span class="octicon octicon-plus"></span>
+       </a></li>
+     <li><a href="#">
+         <div>
+            <img class="avatar" src="http://www.placecage.com/20/20"/>
+       </div>
+
+     </a></li>
+   </ul>
+ </div>
+
+</header>
+
+
+<div class="container">
+ <div class="sidebar">
+   <a href="#"><img src="http://www.placecage.com/233/233" alt="" class="avatar" /></a>
+   <div class="names">
+     <div id="fullname">{full name}</div>
+     <div id="username">{username}</div>
+   </div>
+   <div class="bio">
+     <p>{bio}</p>
+   </div>
+   <ul class="details">
+     <li id="loc-detail">
+       <span class="octicon octicon-location"></span>
+       <div class="detail">{loc}</div>
+     </li>
+     <li id="mail-detail">
+       <span class="octicon octicon-mail"></span>
+       <div class="detail"><a href="#">{}</a></div>
+     </li>
+     <li id="link-detail">
+        <span class="octicon octicon-link"></span>
+       <div class="detail"><a href="#">http://bearshuford.com</a></div>
+    </li>
+     <li id="joined-detail">
+        <span class="octicon octicon-clock"></span>
+       <div class="detail">Joined on August 1, 2016</a></div>
+    </li>
+   </ul>
+ </div>
+
+ <div class="content-wrapper">
+   <nav>
+   <a href="#">Overview</a>
+   <a href="#" class="selected">Repositories
+     <span id="repo-count" class="counter">0</span></a>
+   <a href="#">Stars
+     <span id="star-count" class="counter">0</span></a>
+   <a href="#">Followers
+     <span id="follower-count" class="counter">0</span></a>
+   <a href="#">Following
+     <span id="following-count" class="counter">0</span></a>
+ </nav>
+   <div class="repo-filter">
+   <input type="text" placeholder="Search repositories…" id="search"/>
+   <div class="repo-btn" id="type-btn"><span>Type: </span>All</div>
+   <div class="repo-btn" id="language-btn"><span>Language:</span> All</div>
+ <div class="repo-btn" id="new-btn"><span class="octicon octicon-repo"></span>New</div>
+
+ </div>
+
+   <div class="repo-container">
+     <!-- <div class="repo-item">
+         <div class="repo-name">
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{description}}</p>
+         </div>
+         <div class="stats">
+            <div class="activity"></div>
+            <div class="language"><span>{{language}}</span>
+          </div>
+            <div class="stars"><span>{{stars}}</span></div>
+         </div>
+     </div>
+      <div class="repo-item">
+         <div class="repo-name">
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{description}}</p>
+         </div>
+         <div class="stats">
+            <div class="activity"></div>
+            <div class="language"><span>{{language}}</span>
+          </div>
+            <div class="stars"><span>{{stars}}</span></div>
+         </div> -->
+     </div>
+
+   </div>
+
+</div>
+</div>
+
+
+
+
+
+
 
     <script src="js/bundle.js"></script>
+
+   <script id="repo-stamp" type="text/x-handlebars-template">
+
+
+      <div class="repo-item">
+         <div class="repo-name">
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{description}}</p>
+         </div>
+         <div class="stats">
+            <div class="activity"></div>
+            <div class="language"><span>{{language}}</span></div>
+            <div class="stars">
+               <span class="octicon octicon-star"></span>
+               <span>{{stars}}</span>
+            </div>
+         </div>
+      </div>
+
+   </script>
+
   </body>
 </html>
