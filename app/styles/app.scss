@@ -211,6 +211,9 @@ header{
 
             a{
               color: #4078c0
+              &:hover{
+                 text-decoration: underline;
+              }
             }
 
           }

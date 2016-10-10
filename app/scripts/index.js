@@ -1,7 +1,7 @@
    var $ = require('jQuery');
    var _ = require('underscore');
    var handlebars = require('handlebars');
-   //var githubtoken = require('./gitapikey.js');
+   var githubtoken = require('./gitapikey.js');
 
 
    // string literals
@@ -72,11 +72,11 @@
 
 
 
-   // if(githubtoken !== undefined){
-   //   $.ajaxSetup({
-   //     headers: {'Authorization': 'token ' + githubtoken.token}
-   //   });
-   // }
+   if(githubtoken.token !== undefined){
+     $.ajaxSetup({
+       headers: {'Authorization': 'token ' + githubtoken.token}
+     });
+   }
 
    $.ajax(url+username).then(getUser);
    $.ajax(url+username+repoDir).then(getRepo);
