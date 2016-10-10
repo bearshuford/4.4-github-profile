@@ -178,6 +178,8 @@ header {
           font-size: 14px; }
           .container .sidebar ul.details li .detail a {
             color: #4078c0; }
+            .container .sidebar ul.details li .detail a:hover {
+              text-decoration: underline; }
   .container .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -362,4 +364,5 @@ header {
             -ms-flex: 1 1 auto;
                 flex: 1 1 auto;
         min-width: 35px; }
+
 /*# sourceMappingURL=app.css.map */
